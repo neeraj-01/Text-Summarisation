@@ -57,3 +57,5 @@ userSchema.methods.generateAuthToken = async function(){
 const User =mongoose.model('USER',userSchema);
 
 module.exports = User;
+
+// DATABASE =mongodb+srv://niraj:ng@123456@cluster0.8w5sx.mongodb.net/mern?retryWrites=true&w=majority

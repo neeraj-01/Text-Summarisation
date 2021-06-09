@@ -12,31 +12,41 @@ const Navbar = () => {
         if(state){
             return (
                 <>
-                    {/* <div className="collapse navbar-collapse" id="navbarCollapse">
-                        <div className="navbar-nav mr-auto">
-                            <a href="/login" className="button-link" >Login</a>
-                        </div>
-                    </div> */}
-                    <div className="collapse navbar-collapse" id="navbarCollapse">
-                        <div className="navbar-nav mr-auto">
-                            <a href="/logout" className="button-link" >Logout</a>
-                        </div>
+                    <div className="content">
+                                    <div className="bs-example" >
+                                        <nav className="navbar navbar-expand-md navbar-light bg-light border" >
+                                            <a href="/" className="navbar-brand">
+                                                <img src={logo} height="40" alt="Saransh"></img>
+                                            </a>
+                                            <div className="collapse navbar-collapse" id="navbarCollapse">
+                                                <div className="navbar-nav mr-auto">
+                                                    <a href="/fav " className="btn btn-dark" >Favorite</a>
+                                                    <a href="/readlater" className="button-link">Readlater</a>
+                                                    <a href="/logout" className="button-link" >Logout</a>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
                     </div>
                 </>
             )
         }else{
             return(
                 <>
-                    <div className="collapse navbar-collapse" id="navbarCollapse">
-                        <div className="navbar-nav mr-auto">
-                            <a href="/login" className="button-link" >Login</a>
-                        </div>
+                    <div className="content">
+                                    <div className="bs-example" >
+                                        <nav className="navbar navbar-expand-md navbar-light bg-light border" >
+                                            <a href="/" className="navbar-brand">
+                                                <img src={logo} height="40" alt="Saransh"></img>
+                                            </a>
+                                            <div className="collapse navbar-collapse" id="navbarCollapse">
+                                                <div className="navbar-nav mr-auto">
+                                                    <a href="/login" className="button-link" >Login</a>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
                     </div>
-                    {/* <div className="collapse navbar-collapse" id="navbarCollapse">
-                        <div className="navbar-nav mr-auto">
-                            <a href="/logout" className="button-link" >LogOut</a>
-                        </div>
-                    </div> */}
                 </>
             )
         }
@@ -44,16 +54,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="content">
-                <div className="bs-example" >
-                    <nav className="navbar navbar-expand-md navbar-light bg-light border" >
-                        <a href="/" className="navbar-brand">
-                            <img src={logo} height="40" alt="Saransh"></img>
-                        </a>
-                        <RenderNav></RenderNav>
-                    </nav>
-                </div>
-            </div>
+           <RenderNav />
         </div>
     )
 }

@@ -6,9 +6,15 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import {About} from './components/About';
 import Errorpg from './components/Errorpage'; 
 import Logout from './components/Logout';
+import {NewsSource} from './components/NewsSource';
+
 import { initialState ,reducer } from '../src/reducer/UseReducer';
+import { Fav } from './components/Fav';
+import { ReadLater } from './components/ReadLater';
+
 //contextAPI
 
   export const UserContext = createContext();
@@ -20,11 +26,14 @@ const App = () => {
   return (
     <div>
       <UserContext.Provider value={{ state ,dispatch }}>
+      <Navbar />
       <Switch>
 
       <Route exact path='/'>
-        <Navbar/>
         <Home />
+      </Route>
+      <Route path='/readlater'>
+        <ReadLater/>
       </Route>
       <Route exact path='/login'>
         <Login />
@@ -35,10 +44,18 @@ const App = () => {
       <Route path='/logout'>
         <Logout />
       </Route>
-      <Route>
-        <Errorpg/>
+      <Route path='/About'>
+        <About/>
       </Route>
-
+      <Route path='/NewsSource'>
+        <NewsSource />
+      </Route>
+      <Route path='/fav'>
+        <Fav/>
+      </Route>
+      {/* <Route path ''>
+        <Errorpg/>
+      </Route> */}
       </Switch>
       </UserContext.Provider>
     </div>
